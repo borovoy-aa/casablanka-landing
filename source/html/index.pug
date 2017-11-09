@@ -1,17 +1,18 @@
 extends ../layouts/page.pug
 
 block title
-  title GoodGood
+  title Casablanka
 
 block content
   section.section-introduction#yak1
     .section-introduction__intro
       .container
         .row.justify-content-center
-          .col-lg-8.col-10
-            h2.head-subtitle introduction
-            hr.head-hr
-            p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque necessitatibus maxime ea at quia officia eaque quis ipsam tempora iusto saepe tempore maiores corporis unde, ipsum impedit itaque inventore. Quisquam.
+          .col-lg-8.col-12
+            .section-introduction__head.head
+              h2.head__subtitle introduction
+              hr.head__hr
+              p.head__info Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque necessitatibus maxime ea at quia officia eaque quis ipsam tempora iusto saepe tempore maiores corporis unde, ipsum impedit itaque inventore. Quisquam.
     .section-introduction__creat
       .container
           .row.justify-content-center
@@ -22,8 +23,9 @@ block content
     .container
       .row
         .col
-          h2.head-subtitle some of our work
-          hr.head-hr
+          .section-some-works__head.head
+            h2.head__subtitle some of our work
+            hr.head__hr
           nav.section-some-works__tab-nav#myTab.nav.nav-tabs(role='tablist')
             a#nav-all-tab.nav-item.nav-link.active(data-toggle='tab', href='#nav-all', role='tab', aria-controls='nav-all', aria-selected='true') all
             a#nav-branding-tab.nav-item.nav-link(data-toggle='tab', href='#nav-branding', role='tab', aria-controls='nav-branding', aria-selected='false') branding
@@ -263,8 +265,9 @@ block content
     .container
       .row
         .col
-          h2.head-subtitle our clients
-          hr.head-hr
+          .section-clients__head.head
+            h2.head__subtitle our clients
+            hr.head__hr
           .section-clients__logo-block
             img.section-clients__client-logo(src="../images/clients/1.png", alt="")
             img.section-clients__client-logo(src="../images/clients/2.png", alt="")
@@ -275,11 +278,11 @@ block content
   section.section-about
     .container
       .row.justify-content-center
-        .col-8
+        .col-lg-8.col-12
           .section-about__head
-            h2.head-subtitle about us
-            hr.head-hr
-            p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure, dolor fugit, quasi magni doloremque numquam quaerat vitae, nihil adipisci repudiandae ipsam? Molestias quia id porro accusamus quod eos molestiae magnam.
+            h2.head__subtitle about us
+            hr.head__hr
+            p.head__info Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure, dolor fugit, quasi magni doloremque numquam quaerat vitae, nihil adipisci repudiandae ipsam? Molestias quia id porro accusamus quod eos molestiae magnam.
       .row.justify-content-center
         .col-lg-3.col-md-6.col-8
           .about-photo.md-margin
@@ -313,9 +316,98 @@ block content
 
   section.section-video-block
     .wrapper
-      video.wrapper__video
-        source(src='../video/bcg-video.mp4', type='video/mp4')
+      video.wrapper__video(poster="../images/poster.jpg")
+        source(src='../video/bcg-video.mp4', type='video/mp4' poster="../images/poster.jpg")
       .wrapper__playpause
             
-  
+  section.section-choose-us
+    .container
+      .row.justify-content-center
+        .col-lg-8
+          .section-choose-us__head.head
+            h2.head__subtitle why choose us
+            hr.head__hr
+            p.head__info Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, inventore, veniam quibusdam sunt explicabo quisquam perspiciatis architecto corporis magni voluptate quae delectus, ducimus tempora pariatur.
+      .row
+        .col
+          .owl-carousel.owl-theme.carousel-section
+            .item.carousel-section__item-block
+              .carousel-section__image-block
+                img.carousel-section__image.img-fluid(src="../images/slide-1.png", alt="")
+              .carousel-section__info-block
+                h4 App Design
+                p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa placeat sapiente veniam doloribus excepturi optio!
+            .item.carousel-section__item-block
+              .carousel-section__image-block
+                img.carousel-section__image.img-fluid(src="../images/slide-2.png", alt="")
+              .carousel-section__info-block
+                h4 Responsive Layout
+                p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa placeat sapiente veniam doloribus excepturi optio!
+            .item.carousel-section__item-block
+              .carousel-section__image-block
+                img.carousel-section__image.img-fluid(src="../images/slide-3.png", alt="")
+              .carousel-section__info-block
+                h4 Pixel Perfect Design
+                p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa placeat sapiente veniam doloribus excepturi optio!
+            .item.carousel-section__item-block
+              .carousel-section__image-block
+                img.carousel-section__image.img-fluid(src="../images/slide-1.png", alt="")
+              .carousel-section__info-block
+                h4 App Design
+                p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa placeat sapiente veniam doloribus excepturi optio!
+            .item.carousel-section__item-block
+              .carousel-section__image-block
+                img.carousel-section__image.img-fluid(src="../images/slide-2.png", alt="")
+              .carousel-section__info-block
+                h4 Responsive Layout
+                p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa placeat sapiente veniam doloribus excepturi optio!
+            .item.carousel-section__item-block
+              .carousel-section__image-block
+                img.carousel-section__image.img-fluid(src="../images/slide-3.png", alt="")
+              .carousel-section__info-block
+                h4 Pixel Perfect Design
+                p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa placeat sapiente veniam doloribus excepturi optio!
+
+  section.section-quote-now
+    .container
+      .row.justify-content-center
+        .col-lg-5.col-md-8.col-10
+          button.button.button--ghost Get a quote now.
+
+  section.section-touch
+    .container
+      .row.justify-content-center
+        .col-lg-8.col-md-10.col-12
+          h2.head__subtitle get in touch
+          hr.head__hr
+          p.head__info Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum beatae repellendus, odio libero ut, consequuntur, ratione dolor architecto ducimus doloribus accusamus cupiditate fugit asperiores possimus at sunt aspernatur aliquam neque?
+
+  section.section-contacts
+    .container-fluid
+      .row
+        .col-lg-4.col-md-3.col-12
+          .section-contacts__location
+            .section-contacts__contact-wrap
+              h3 our location
+              p 174 Mimosa ST. NW
+              p Casablanca, MA 20370
+              p (212) 123 456 7
+              p Samir Timezguida
+              a(href="#")
+                i.tw-link.fa.fa-twitter(aria-hidden='true')
+              a(href="#")
+                i.fb-link.fa.fa-facebook(aria-hidden='true')
+              a(href="#")
+                i.in-link.fa.fa-linkedin(aria-hidden='true')
+              a(href="#")
+                i.vm-link.fa.fa-vimeo(aria-hidden='true')
+              a(href="#")
+                i.be-link.fa.fa-behance(aria-hidden='true')
+        .col-lg-8.col-md-9.col-12
+          .section-contacts__forms
+            form.form.form--request(action='', method='POST', name=' application ')
+              input.input.input--transparent(name='name', maxlength='20', placeholder='Name', required='')
+              input.input.input--transparent(name='email', type='email', maxlength='20', placeholder='Email', required='')
+              input.input.input--transparent.input-message(name='message', type='message', maxlength='20', placeholder='Message', required='')
+              button.button.button--black-small(type='submit', form='application') Send
 block scripts
